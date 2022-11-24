@@ -9,13 +9,13 @@ pipeline {
         stage('Build Code') {
             steps {
                 sh "chmod u+x leap_year.py"
-                sh "./leap_year.py"
+                sh "python leap_year.py"
             }
         }
      stage('Test Code') {
             steps {
                 sh "chmod u+x test.py"
-                sh "./test.py"
+                sh "python test.py"
             }
         }
     } 

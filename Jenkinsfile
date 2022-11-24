@@ -12,10 +12,16 @@ pipeline {
                 sh "python leap_year.py"
             }
         }
-     stage('Test Code') {
+     stage('Test Code Pass') {
             steps {
-                sh "chmod u+x test.py"
-                sh "python test.py"
+                sh "chmod u+x test_suc.py"
+                sh "python test_suc.py"
+            }
+        }
+        stage('Test Code Fail') {
+            steps {
+                sh "chmod u+x test_fail.py"
+                sh "python test_fail.py"
             }
         }
     } 
